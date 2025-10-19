@@ -106,13 +106,10 @@ export const PixelImage = ({
   const containerStyle: React.CSSProperties = {};
 
   if (responsive) {
-    containerStyle.width = "100%"; // full width của wrapper (vd: max-w-xl)
-    // Sử dụng CSS aspect-ratio để giữ tỷ lệ khi responsive
-    // (được hỗ trợ rộng rãi; nếu cần fallback có thể thêm padding-top trick)
-    // Lưu ý: khi responsive=true, height trực tiếp sẽ bị bỏ qua để ưu tiên aspect ratio
-    (containerStyle as any)["aspectRatio"] = aspectRatio;
+    containerStyle.width = "100%";
+    // Gán dạng string để khớp React.CSSProperties
+    containerStyle.aspectRatio = String(aspectRatio);
   } else {
-    // Kích thước tuyệt đối
     if (width || height || size) {
       if (width)
         containerStyle.width = typeof width === "number" ? `${width}px` : width;
@@ -124,8 +121,7 @@ export const PixelImage = ({
       if (!height && size)
         containerStyle.height = typeof size === "number" ? `${size}px` : size;
     } else {
-      // Fallback: giống trước đây (72 -> md:96)
-      containerStyle.width = undefined; // dùng class tailwind default
+      containerStyle.width = undefined;
       containerStyle.height = undefined;
     }
   }
