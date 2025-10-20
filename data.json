@@ -5,13 +5,21 @@
     "ten_ba": "Trần Viết Tỵ",
     "ten_me": "Nguyễn Thị Dung",
     "ten": "Trần Viết Đức",
-    "dia_chi": "Quyết Thắng - Trường Ninh - Quảng Trị",
+    "dia_chi": {
+      "thon": "Quyết Thắng",
+      "huyen": "Trường Sơn",
+      "tinh": "Quảng Trị"
+    },
     "ngay_to_chuc": "29/11/2025",
-    "gio_cuoi": "10:00 ",
-    "thu": "Thứ Sáu",
-    "dia_diem": "Nhà văn hóa thôn Quyết Thắng, huyện Trường Ninh, tỉnh Quảng Bình",
+    "ngay_to_chuc_eng": "29 November 2025",
+    "thoi_gian": "2025-11-29T10:00:00+07:00",
+    "ngay_am": " ngày 10 tháng 10 năm Ất Tỵ",
+    "dia_diem": {
+      "ten": "NHÀ VĂN HÓA",
+      "dia_chi_chi_tiet": "thôn Quyết Thắng, huyện Trường Ninh, tỉnh Quảng Trị"
+    },
     "link_google_map": "https://www.google.com/maps/place/Nh%C3%A0+v%C4%83n+h%C3%B3a+th%C3%B4n+quy%E1%BA%BFt+th%E1%BA%AFng/@17.3075226,106.6166156,17.39z/data=!4m6!3m5!1s0x3140ab0071e46743:0xfe5a06761b8ed340!8m2!3d17.3074133!4d106.620858!16s%2Fg%2F11xm0kbdcv?entry=ttu&g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D",
-    "stk": "0966791931",
+    "stk": "0866791931",
     "ten_ngan_hang": "Vietinbank",
     "link_qr": "https://img.vietqr.io/image/vietinbank-0866791931-compact.jpg"
   },
@@ -19,11 +27,18 @@
     "ten_ba": "Đinh Văn Hạnh",
     "ten_me": "Phạm Thị Nõn",
     "ten": "Đinh Thị Ngoc Anh",
-    "dia_chi": "Quảng Trị",
+    "dia_chi": {
+      "thon": "Xuân Mai",
+      "huyen": "Chương Mỹ",
+      "tinh": "Hà Nội"
+    },
     "ngay_to_chuc": "26/11/2025",
-    "gio_cuoi": "10:00 ",
-    "thu": "Thứ Sáu",
-    "dia_diem": "125A, tổ 4, Đường Tân Bình, Xuân Mai, Chương Mỹ, Hà Nội",
+    "ngay_to_chuc_eng": "26 November 2025",
+    "thoi_gian": "2025-11-26T10:00:00+07:00",
+    "dia_diem": {
+      "ten": "TƯ GIA",
+      "dia_chi_chi_tiet": "125A, tổ 4, Đường Tân Bình, Xuân Mai, Chương Mỹ, Hà Nội"
+    },
     "link_google_map": "https://www.google.com/maps/place/Nh%C3%A0+v%C4%83n+h%C3%B3a+th%C3%B4n+quy%E1%BA%BFt+th%E1%BA%AFng/@17.3075226,106.6166156,17.39z/data=!4m6!3m5!1s0x3140ab0071e46743:0xfe5a06761b8ed340!8m2!3d17.3074133!4d106.620858!16s%2Fg%2F11xm0kbdcv?entry=ttu&g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D",
     "stk": "00908101502",
     "ten_ngan_hang": "TpBank",

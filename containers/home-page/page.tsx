@@ -4,11 +4,11 @@ import { PixelImage } from "@/components/ui/pixel-image";
 import { motion, MotionConfig, useReducedMotion } from "framer-motion";
 import CountdownSection from "./sections/CountdownSection";
 import React, { useMemo } from "react";
-import Image from "next/image";
 import BackgroundMusic from "@/components/ui/music";
-
+import data from "../../data.json";
 export const HomePage = () => {
-  const weddingISO = "2025-11-29T10:30:00+07:00";
+  const tt = data;
+  const weddingISO = tt.thong_tin_nha_trai.thoi_gian;
   const prefersReduced = useReducedMotion();
   const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
   const ACCENT = "#7b2323";
@@ -16,12 +16,12 @@ export const HomePage = () => {
 
   // ... phía trên giữ nguyên
   const albumImages = [
-    "/images/1_doc.jpg",
+    "/images/2doc.jpg",
     "/images/5doc.jpg",
     "/images/6doc.jpg",
     "/images/7doc.jpg",
     "/images/8doc.jpg",
-    "/images/9ngang.jpg",
+    "/images/10ngang.jpg",
   ];
 
   const [lbOpen, setLbOpen] = React.useState(false);
@@ -83,7 +83,7 @@ export const HomePage = () => {
             className="mb-3 text-white text-[clamp(18px,3.6vw,22px)] tracking-[0.02em]"
             style={{ fontFamily: "Playfair Display, serif" }}
           >
-            Save the date | 29 November 2025
+            Save the date | {tt.thong_tin_nha_trai.ngay_to_chuc_eng}
           </motion.h1>
 
           <motion.div
@@ -140,24 +140,26 @@ export const HomePage = () => {
                 className="text-[13px] sm:text-sm text-gray-700"
                 style={{ fontFamily: "Be Vietnam Pro, sans-serif" }}
               >
-                Ông Trần Viết Tỵ
+                Ông {tt.thong_tin_nha_trai.ten_ba}
               </p>
               <p
                 className="text-[13px] sm:text-sm text-gray-700"
                 style={{ fontFamily: "Be Vietnam Pro, sans-serif" }}
               >
-                Bà Nguyễn Thị Dung
+                Bà {tt.thong_tin_nha_trai.ten_me}
               </p>
               <p
                 className="text-[12px] sm:text-xs text-gray-600 mt-1"
                 style={{ fontFamily: "Be Vietnam Pro, sans-serif" }}
               >
-                Quyết Thắng, Trường Sơn, Quảng Trị
+                {tt.thong_tin_nha_trai.dia_chi.thon},{" "}
+                {tt.thong_tin_nha_trai.dia_chi.huyen}
+                <br />
+                {tt.thong_tin_nha_trai.dia_chi.tinh}
               </p>
 
-              {/* eslint-disable-next-line @next/next/no-img-element */}
               <motion.img
-                src="/images/1_doc.jpg"
+                src="/images/main_nam.jpg"
                 alt="Chú rể"
                 className="mt-3 mx-auto w-36 h-36 rounded-full object-cover ring-2 ring-gray-200"
                 whileHover={{ scale: 1.04 }}
@@ -198,24 +200,27 @@ export const HomePage = () => {
                 className="text-[13px] sm:text-sm text-gray-700"
                 style={{ fontFamily: "Be Vietnam Pro, sans-serif" }}
               >
-                Ông Đinh Văn Hạnh
+                Ông {tt.thong_tin_nha_gai.ten_ba}
               </p>
               <p
                 className="text-[13px] sm:text-sm text-gray-700"
                 style={{ fontFamily: "Be Vietnam Pro, sans-serif" }}
               >
-                Bà Phạm Thị Nõn
+                Bà {tt.thong_tin_nha_gai.ten_me}
               </p>
               <p
                 className="text-[12px] sm:text-xs text-gray-600 mt-1"
                 style={{ fontFamily: "Be Vietnam Pro, sans-serif" }}
               >
-                Tân Bình, Chương Mỹ, TP.Hà Nội
+                {tt.thong_tin_nha_gai.dia_chi.thon},{" "}
+                {tt.thong_tin_nha_gai.dia_chi.huyen}
+                <br />
+                {tt.thong_tin_nha_gai.dia_chi.tinh}
               </p>
 
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <motion.img
-                src="/images/1_doc.jpg"
+                src="/images/main_nu.jpg"
                 alt="Cô dâu"
                 className="mt-3 mx-auto w-36 h-36 rounded-full object-cover ring-2 ring-gray-200"
                 whileHover={{ scale: 1.04 }}
@@ -296,7 +301,7 @@ export const HomePage = () => {
 
           {/* 3 ảnh */}
           <div className="grid grid-cols-3 gap-3 sm:gap-4 mb-8">
-            {["/images/5doc.jpg", "/images/6doc.jpg", "/images/7doc.jpg"].map(
+            {["/images/7doc.jpg", "/images/3doc.jpg", "/images/11doc.jpg"].map(
               (src, i) => (
                 // eslint-disable-next-line @next/next/no-img-element
                 <motion.img
@@ -329,15 +334,17 @@ export const HomePage = () => {
               className="tracking-wide text-[13px] sm:text-[15px]"
               style={{ fontFamily: "Be Vietnam Pro, sans-serif" }}
             >
-              THAM DỰ TIỆC MỪNG LỄ THÀNH HÔN
-              <br /> CỦA CON CHÚNG TÔI
+              Thời gian trôi, tình yêu đong đầy <br /> Chúng mình trân trọng
+              kính mời bạn đến dự lễ cưới <br /> Cùng chứng kiến lời thề nguyện
+              và sẻ chia khoảnh khắc hạnh phúc <br /> Sự hiện diện của bạn sẽ
+              làm ngày đặc biệt này thêm rạng ngời
             </p>
-
+            <hr className="w-20 mx-auto mt-1" />
             <p
               className="mt-3 text-[13px] sm:text-[15px]"
               style={{ fontFamily: "Be Vietnam Pro, sans-serif" }}
             >
-              Vào lúc
+              Tiệc cưới diễn ra vào lúc
             </p>
 
             <div className="mt-1 grid grid-cols-3 items-start">
@@ -382,7 +389,7 @@ export const HomePage = () => {
               className="mt-2 text-[12px] sm:text-[14px] italic text-gray-300"
               style={{ fontFamily: "Be Vietnam Pro, sans-serif" }}
             >
-              (Nhằm ngày 6 tháng 9 năm Ất Tỵ)
+              (Nhằm {tt.thong_tin_nha_trai.ngay_am})
             </p>
           </motion.div>
 
@@ -481,14 +488,14 @@ export const HomePage = () => {
         {/* === Địa điểm (map) === */}
         <motion.section
           id="map"
-          className="w-full px-4 py-6"
+          className="w-full py-6"
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.35 }}
           transition={{ delay: 0.06 }}
         >
           {/* Nền trắng sữa nổi bật trên nền đỏ */}
-          <div className="rounded-2xl bg-white/95 border border-white/70 shadow-lg  text-center">
+          <div className=" bg-white/95 border border-white/70 shadow-lg  text-center">
             {/* Tiêu đề */}
             <h1
               className="text-[clamp(20px,4vw,26px)] my-2 tracking-wide"
@@ -508,7 +515,7 @@ export const HomePage = () => {
                 color: "#b14d4d",
               }}
             >
-              Nhà văn hóa
+              {tt.thong_tin_nha_trai.dia_diem.ten}
             </p>
             <p
               className="text-[13px] sm:text-[14px] mb-4"
@@ -517,14 +524,14 @@ export const HomePage = () => {
                 color: "#5a1a1a",
               }}
             >
-              thôn Quyết Thắng, xã Trường Sơn, tỉnh Quảng Trị
+              {tt.thong_tin_nha_trai.dia_diem.dia_chi_chi_tiet}
             </p>
 
             {/* Đường ngăn trang trí */}
             <div className="mx-auto mb-5 h-px w-24 bg-[#b14d4d]/50 rounded-full" />
 
             {/* Khung bản đồ bo góc mềm */}
-            <div className="overflow-hidden rounded-xl border border-gray-200 shadow-inner">
+            <div className="overflow-hidden m-4 rounded-xl border border-gray-200 shadow-inner">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3625.653851129591!2d106.61828307486743!3d17.307418405104666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3140ab0071e46743%3A0xfe5a06761b8ed340!2zTmjDoCB2xINuIGjDs2EgdGjDtG4gcXV54bq_dCB0aOG6r25n!5e1!3m2!1svi!2s!4v1760901116472!5m2!1svi!2s"
                 width="600"
@@ -673,7 +680,7 @@ export const HomePage = () => {
             <div className="">
               {/* Ảnh QR */}
               <img
-                src="https://img.vietqr.io/image/vietinbank-0866791931-compact.jpg"
+                src={tt.thong_tin_nha_trai.link_qr}
                 alt="VietQR"
                 width={260}
                 height={260}
@@ -690,15 +697,17 @@ export const HomePage = () => {
                     color: "#7b2323",
                   }}
                 >
-                  Trần Viết Đức
+                  {tt.thong_tin_nha_trai.ten}
                 </p>
                 <p
                   className="text-[14px] text-gray-700"
                   style={{ fontFamily: "Be Vietnam Pro, sans-serif" }}
                 >
                   STK:{" "}
-                  <span className="font-medium text-[#b14d4d]">0866791931</span>{" "}
-                  | Vietinbank
+                  <span className="font-medium text-[#b14d4d]">
+                    {tt.thong_tin_nha_trai.stk}
+                  </span>{" "}
+                  | {tt.thong_tin_nha_trai.ten_ngan_hang}
                 </p>
               </div>
 
@@ -707,7 +716,23 @@ export const HomePage = () => {
             </div>
           </div>
         </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.45 }}
+          transition={{ duration: 0.6, ease: EASE, delay: 0.08 }}
+          className="mt-2 text-white text-center py-6 text-[clamp(32px,7vw,52px)] leading-[1.05]"
+          style={{ fontFamily: "Great Vibes, cursive" }}
+        >
+          Thank you!
+        </motion.div>
+        <footer>
+          <div className="text-center text-gray-500 text-xs py-4">
+            Design by Viết Đức &amp; Ngọc Anh © 2025
+          </div>
+        </footer>
       </div>
+
       <BackgroundMusic src="/sounds/nhac.mp3" autoPlay={true} />
     </MotionConfig>
   );
