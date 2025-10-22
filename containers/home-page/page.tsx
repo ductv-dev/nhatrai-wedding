@@ -336,8 +336,8 @@ export const HomePage = () => {
             >
               Thời gian trôi, tình yêu đong đầy <br /> Chúng mình trân trọng
               kính mời bạn đến dự lễ cưới <br /> Cùng chứng kiến lời thề nguyện
-              và sẻ chia khoảnh khắc hạnh phúc <br /> Sự hiện diện của bạn sẽ
-              làm ngày đặc biệt này thêm rạng ngời
+              và sẻ chia khoảnh khắc hạnh phúc. Sự hiện diện của bạn sẽ làm ngày
+              đặc biệt này thêm rạng ngời
             </p>
             <hr className="w-20 mx-auto mt-1" />
             <p
