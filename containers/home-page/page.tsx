@@ -17,11 +17,11 @@ export const HomePage = () => {
   // ... phía trên giữ nguyên
   const albumImages = [
     "/images/2doc.jpg",
-    "/images/1.jpg",
-    "/images/5.jpg",
-    "/images/4.jpg",
-    "/images/2.jpg",
-    "/images/3.jpg",
+    "/images/1.JPG",
+    "/images/5.JPG",
+    "/images/4.JPG",
+    "/images/2.JPG",
+    "/images/3.JPG",
   ];
 
   const [lbOpen, setLbOpen] = React.useState(false);
@@ -301,7 +301,7 @@ export const HomePage = () => {
 
           {/* 3 ảnh */}
           <div className="grid grid-cols-3 gap-3 sm:gap-4 mb-8">
-            {["/images/1_doc.jpg", "/images/3.jpg", "/images/1.jpg"].map(
+            {["/images/1_doc.jpg", "/images/3.JPG", "/images/1.JPG"].map(
               (src, i) => (
                 // eslint-disable-next-line @next/next/no-img-element
                 <motion.img
