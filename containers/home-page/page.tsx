@@ -17,11 +17,11 @@ export const HomePage = () => {
   // ... phía trên giữ nguyên
   const albumImages = [
     "/images/2doc.jpg",
-    "/images/5doc.jpg",
-    "/images/6doc.jpg",
-    "/images/7doc.jpg",
-    "/images/8doc.jpg",
-    "/images/10ngang.jpg",
+    "/images/1.jpg",
+    "/images/5.jpg",
+    "/images/4.jpg",
+    "/images/2.jpg",
+    "/images/3.jpg",
   ];
 
   const [lbOpen, setLbOpen] = React.useState(false);
@@ -107,7 +107,7 @@ export const HomePage = () => {
           className="relative max-w-xl mx-auto px-6"
         >
           <PixelImage
-            src="/images/1_doc.jpg"
+            src="/images/6doc.jpg"
             responsive
             aspectRatio={0.8}
             rounded={12}
@@ -301,7 +301,7 @@ export const HomePage = () => {
 
           {/* 3 ảnh */}
           <div className="grid grid-cols-3 gap-3 sm:gap-4 mb-8">
-            {["/images/7doc.jpg", "/images/3doc.jpg", "/images/11doc.jpg"].map(
+            {["/images/1_doc.jpg", "/images/3.jpg", "/images/1.jpg"].map(
               (src, i) => (
                 // eslint-disable-next-line @next/next/no-img-element
                 <motion.img
